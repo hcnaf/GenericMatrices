@@ -15,7 +15,7 @@ namespace GenericMatricesTests
             matrix1[1, 2] = 5;
             matrix2[4, 2] = 1;
 
-            var res = matrix1 + matrix2;
+            var res = matrix1.Add(matrix2);
 
             var expectedResult = new SquareMatrix<int>(6);
             expectedResult[1, 2] = 5;
@@ -31,7 +31,7 @@ namespace GenericMatricesTests
             var matrix1 = new SquareMatrix<bool>(4);
             var matrix2 = new SquareMatrix<bool>(4);
 
-            Assert.Throws<RuntimeBinderException>(() => matrix1 += matrix2);
+            Assert.Throws<RuntimeBinderException>(() => matrix1.Add(matrix2));
         }
     }
 }
